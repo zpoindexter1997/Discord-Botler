@@ -1,12 +1,9 @@
-﻿using Discord.Commands;
-using DSharpPlus.CommandsNext;
+﻿using DSharpPlus.CommandsNext;
 using DSharpPlus.CommandsNext.Attributes;
-using System;
-using System.Threading.Tasks;
 
-namespace WarzoneDiscordBot.Modules
+namespace Discord_Botler.Commands
 {
-    public class RandomTargetModule : BaseCommandModule
+    public class RandomTargetCommand : BaseCommandModule
     {
         [Command("target")]
         [Aliases("t", "tp")]
@@ -26,6 +23,5 @@ namespace WarzoneDiscordBot.Modules
             var randomUser = userList[random.Next(0, amount)];
             await context.Channel.SendMessageAsync($"{randomUser}");
         }
-
     }
 }

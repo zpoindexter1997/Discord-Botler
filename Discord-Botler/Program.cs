@@ -37,6 +37,10 @@ namespace Discord_Botler
             Commands = Client.UseCommandsNext(commandsConfig);
 
             Commands.RegisterCommands<ExampleCommands>();
+            Commands.RegisterCommands<RandomTargetCommand>();
+            Commands.RegisterCommands<InsultCommand>();
+            Commands.RegisterCommands<RollCommand>();
+            Commands.RegisterCommands<ComplimentCommand>();
 
             await Client.ConnectAsync();
             await Task.Delay(-1);

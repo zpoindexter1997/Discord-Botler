@@ -1,9 +1,9 @@
 ﻿using DSharpPlus.CommandsNext;
 using DSharpPlus.CommandsNext.Attributes;
 
-namespace WarzoneDiscordBot.Modules
+namespace Discord_Botler.Commands
 {
-    public class ComplimentModule : BaseCommandModule
+    public class ComplimentCommand : BaseCommandModule
     {
         [Command("compliment")]
         [Aliases("c")]

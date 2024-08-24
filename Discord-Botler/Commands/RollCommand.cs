@@ -3,7 +3,7 @@ using DSharpPlus.CommandsNext.Attributes;
 
 namespace Discord_Botler.Commands
 {
-    public class RollModule : BaseCommandModule
+    public class RollCommand : BaseCommandModule
     {
         // !roll 6 -> 5
         [Command("roll")]
@@ -19,7 +19,6 @@ namespace Discord_Botler.Commands
 
         // !roll 1 6 -> 5
         [Command("roll")]
-        [Aliases("r")]
         [Description("Rolls some die.")]
         public async Task RollAsync(CommandContext context,
             [Description("Number of dice to roll.")] int die,
@@ -64,7 +63,6 @@ namespace Discord_Botler.Commands
 
         // !checkroll 2 20 10 -> 7 Lmao, imagine being a nerd
         [Command("checkroll")]
-        [Aliases("cr")]
         [Description("Rolls some die and sees if you pass the check.")]
         public async Task CheckRollAsync(CommandContext context,
             [Description("Number of dice to roll.")] int die,
